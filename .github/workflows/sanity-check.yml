@@ -32,7 +32,6 @@ jobs:
           app_path: .
           build_command: bash build.sh
       - name: Upload payload artifact
-        if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@main
         with:
           name: ${{ env.hen-bin }}
